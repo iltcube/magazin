@@ -3,7 +3,57 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    padding-top: 40px;
+    background-color: #EEEEEE;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-item:not(:last-child) {
+        margin-right: 45px;
+    }
+
+    &__list-link {
+        padding-bottom: 10px;
+        border-bottom: 2px solid transparent;
+        transition: all .3s;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__list-link--active {
+        border-bottom: 2px solid $accent;
+    }
+}
+
+.user-nav {
+    &__link {
+        position: relative;
+    }
+
+    &__link::before {
+        content: '';
+        background-image: url(../images/icons/cart.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 2;
+        left: -40px;
+    }
+}
 
 
-
-@import 'media ';
+@import 'media';
